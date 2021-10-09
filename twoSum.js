@@ -12,6 +12,7 @@
 //If I find a matching sum, I will take both numbers and add them to a final array
 //I will then return the final array
 
+// Brute force, O(n*2)
 function twoSum(nums, target) {
   for (let index = 0; index < nums.length; index++) {
     for (let index2 = 0; index2 < nums.length; index2++) {
@@ -26,4 +27,28 @@ function twoSum(nums, target) {
   }
 }
 
-module.exports = twoSum;
+// Using an object to map key values O(n)
+function twoSumNext(nums, target) {
+  let map = {};
+  for (let index = 0; index < nums.length; index++) {
+    // iterate through each number in the array
+    // subtract the number from the target
+    // check to see if the remainder exists in the map
+    // if it does, grab the index of that value and the index of the current number
+    // return both in an array
+    let difference = target - nums[index];
+    if (Object.values(map).includes(difference)) {
+      return [
+        parseInt(Object.keys(map).find((number) => map[number] === difference)),
+        index,
+      ];
+    } else {
+      map[index] = nums[index];
+    }
+  }
+}
+
+module.exports = {
+  twoSum,
+  twoSumNext,
+};

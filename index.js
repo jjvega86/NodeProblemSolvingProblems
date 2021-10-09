@@ -1,3 +1,3 @@
-const twoSum = require("./twoSum");
+const { twoSumNext } = require("./twoSum");
 
-console.log(twoSum([3, 2, 4], 6));
+console.log(twoSumNext([2, 7, 11, 15], 9));
