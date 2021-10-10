@@ -4,9 +4,9 @@ class LinkedList {
   constructor(iterable) {
     this.head = null;
     this.nodeCount = 0;
-    this.initializeList(iterable);
+    if (iterable) this.initializeList(iterable);
   }
-  //* This method will run automatically when linked list is created. Iterable is passed in when list is instantiated
+  //* This method will run automatically when linked list is created if iterable present. Iterable is passed in when list is instantiated
   initializeList(iterable) {
     try {
       for (let element of iterable) {
