@@ -9,8 +9,19 @@ class LinkedList {
       this.head = nodeToAdd;
       this.nodeCount++;
     } else {
-      this.head.next = nodeToAdd;
+      nodeToAdd.next = this.head;
+      this.head = nodeToAdd;
       this.nodeCount++;
     }
   }
+
+  printNodes() {
+    let current = this.head;
+    for (let index = 0; index < this.nodeCount; index++) {
+      console.log(current);
+      current = current.next;
+    }
+  }
 }
+
+module.exports = LinkedList;
