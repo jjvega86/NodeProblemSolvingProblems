@@ -1,7 +1,17 @@
+const Node = require("../classes/Node");
+
 class LinkedList {
-  constructor() {
+  constructor(iterable) {
     this.head = null;
     this.nodeCount = 0;
+    this.initializeList(iterable);
+  }
+  //* This method will run automatically when linked list is created. Iterable is passed in when list is instantiated
+  initializeList(iterable) {
+    for (let element of iterable) {
+      let node = new Node(element);
+      this.addNode(node);
+    }
   }
 
   addNode(nodeToAdd) {
