@@ -8,13 +8,18 @@ class LinkedList {
   }
   //* This method will run automatically when linked list is created. Iterable is passed in when list is instantiated
   initializeList(iterable) {
-    for (let element of iterable) {
-      let node = new Node(element);
-      this.addNode(node);
+    try {
+      for (let element of iterable) {
+        let node = new Node(element);
+        this.addNode(node);
+      }
+    } catch (error) {
+      throw new Error("Iterable not passed into constructor!");
     }
   }
 
-  addNode(nodeToAdd) {
+  addNode(data) {
+    let nodeToAdd = new Node(data);
     if (this.head === null) {
       this.head = nodeToAdd;
       this.nodeCount++;
@@ -25,11 +30,9 @@ class LinkedList {
     }
   }
 
-  printNodes() {
-    let current = this.head;
-    for (let index = 0; index < this.nodeCount; index++) {
-      console.log(current);
-      current = current.next;
+  printNodeData() {
+    for (let val of this.yieldValues()) {
+      console.log(val);
     }
   }
   *yieldValues() {

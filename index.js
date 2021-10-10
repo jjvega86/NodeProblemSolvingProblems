@@ -1,28 +1,7 @@
-const Node = require("./classes/Node");
 const LinkedList = require("./classes/LinkedList");
 
 let list = new LinkedList([1, 2, 4]);
-let node1 = new Node(1);
-let node2 = new Node(2);
-let node3 = new Node(3);
-
-let list2 = new LinkedList();
-let node4 = new Node(1);
-let node5 = new Node(2);
-let node6 = new Node(4);
-
-list.addNode(node1);
-list.addNode(node2);
-list.addNode(node3);
-
-list2.addNode(node4);
-list2.addNode(node5);
-list2.addNode(node6);
-
-/* for (const val of list.yieldValues()) {
-  console.log(val);
-}
- */
+let list2 = new LinkedList([1, 3, 5]);
 
 function addTwoNumbers(linkedList1, linkedList2) {
   // traverse each linkedlist, one at a time
@@ -40,7 +19,14 @@ function addTwoNumbers(linkedList1, linkedList2) {
   let finalNumber =
     parseInt(firstNumber.split("").reverse().join("")) +
     parseInt(secondNumber.split("").reverse().join(""));
-  let finalList = new LinkedList();
+  let finalList = new LinkedList(
+    finalNumber
+      .toString()
+      .split("")
+      .map((number) => parseInt(number))
+  );
+  return finalList;
 }
 
-addTwoNumbers(list, list2);
+let result = addTwoNumbers(list, list2);
+result.printNodeData();
