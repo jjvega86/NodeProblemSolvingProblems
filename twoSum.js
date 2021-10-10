@@ -48,7 +48,22 @@ function twoSumNext(nums, target) {
   }
 }
 
+// Same as above, using the Map structure instead
+
+function twoSumMap(nums, target) {
+  let map = new Map();
+  for (let index = 0; index < nums.length; index++) {
+    let difference = target - nums[index];
+    if (map.has(difference)) {
+      return [map.get(difference), index];
+    } else {
+      map.set(nums[index], index);
+    }
+  }
+}
+
 module.exports = {
   twoSum,
   twoSumNext,
+  twoSumMap,
 };
