@@ -10,4 +10,19 @@ list.addNode(node1);
 list.addNode(node2);
 list.addNode(node3);
 
-list.printNodes();
+/* for (const val of list.yieldValues()) {
+  console.log(val);
+}
+ */
+const listData = list.yieldValues();
+
+console.log(listData.next().value);
+
+function addTwoNumbers(linkedList1, linkedList2) {
+  //traverse each linkedlist, one at a time
+  //add the data on each node to a single string value, then parse to an int
+  // add both parsed values together into a single final value
+  // split the final value into an array and return
+  let firstNumber = "";
+  let secondNumber = "";
+}

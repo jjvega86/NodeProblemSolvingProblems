@@ -22,6 +22,13 @@ class LinkedList {
       current = current.next;
     }
   }
+  *yieldValues() {
+    let current = this.head;
+    for (let index = 0; index < this.nodeCount; index++) {
+      yield current.data;
+      current = current.next;
+    }
+  }
 }
 
 module.exports = LinkedList;
