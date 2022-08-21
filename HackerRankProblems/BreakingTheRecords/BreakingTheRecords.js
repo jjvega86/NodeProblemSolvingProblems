@@ -22,5 +22,13 @@ breakingRecords has the following parameter(s):
 int scores[n]: points scored per game
 
 Returns
-int[2]: An array with the numbers of times she broke her records. Index  is for breaking most points records, and index  is for breaking least points records.
+int[2]: An array with the numbers of times she broke her records. Index 0  is for breaking most points records, and index 1  is for breaking least points records.
  */
+
+// let numberOfGames = 9
+// let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+function breakingRecords(scores) {}
+
+// EXPECTED OUTPUT: 2 4
+
+module.exports = breakingRecords;
