@@ -16,19 +16,29 @@ Scores are in the same order as the games played. She tabulates her results as f
 
      Given the scores for a season, determine the number of times Maria breaks her records for most and least points scored during the season.
 
-Function Description
-Complete the breakingRecords function in the editor below.
-breakingRecords has the following parameter(s):
-int scores[n]: points scored per game
-
-Returns
-int[2]: An array with the numbers of times she broke her records. Index 0  is for breaking most points records, and index 1  is for breaking least points records.
  */
 
-// let numberOfGames = 9
-// let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
-function breakingRecords(scores) {}
+/**
+ * Big O Notation: O(N) -> size of inputs will always determine number of steps, because each score must be checked in entire array
+ * @param {number[]} scores all game scores in order of game played through season
+ * @returns {number[]} records index 0 is times maximum score was beat, index 1 is times minimum score was beat
+ */
+function breakingRecords(scores) {
+  let records = [0, 0];
+  let currentMax = scores[0];
+  let currentMin = scores[0];
+  for (let index = 1; index < scores.length; index++) {
+    if (scores[index] > currentMax) {
+      records[0]++;
+      currentMax = scores[index];
+    }
+    if (scores[index] < currentMin) {
+      records[1]++;
+      currentMin = scores[index];
+    }
+  }
 
-// EXPECTED OUTPUT: 2 4
+  return records;
+}
 
 module.exports = breakingRecords;
