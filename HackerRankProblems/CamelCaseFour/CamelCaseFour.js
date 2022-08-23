@@ -31,7 +31,19 @@ picture frame
  */
 
 function processData(input) {
-  //Enter your code here
+  let [opType, resultType, inputString] = input.split(";");
+  let finalString = "";
+  if (opType === "S") {
+    finalString = splitInput(resultType, inputString);
+  } else if (opType === "C") {
+    finalString = combineInput(resultType, inputString);
+  }
+
+  return finalString;
 }
+
+function splitInput(type, input) {}
+
+function combineInput(type, input) {}
 
 module.exports = processData;
