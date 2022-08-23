@@ -33,6 +33,7 @@ picture frame
 function processData(input) {
   let [opType, resultType, inputString] = input.split(";");
   let finalString = "";
+
   if (opType === "S") {
     finalString = splitInput(resultType, inputString);
   } else if (opType === "C") {
@@ -42,7 +43,31 @@ function processData(input) {
   return finalString;
 }
 
-function splitInput(type, input) {}
+function splitInput(type, input) {
+  let result = "";
+
+  switch (type) {
+    case "M":
+      result = splitMethod(input);
+      break;
+    case "C":
+      result = splitClass(input);
+      break;
+    case "V":
+      result = splitVariable(input);
+      break;
+    default:
+      return result;
+  }
+
+  return result;
+}
+
+function splitVariable(input) {}
+
+function splitClass(input) {}
+
+function splitMethod(input) {}
 
 function combineInput(type, input) {}
 
