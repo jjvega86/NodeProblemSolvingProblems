@@ -5,6 +5,11 @@ test("plasticCup() method becomes plastic cup string", () => {
   expect(processData(input)).toBe("plastic cup");
 });
 
+test("bigGlassBottleOfRum() method becomes big glass bottle of rum string", () => {
+  let input = "S;M;bigGlassBottleOfRum()";
+  expect(processData(input)).toBe("big glass bottle of rum");
+});
+
 test("mobile phone string becomes mobilePhone variable", () => {
   let input = "C;V;mobile phone";
   expect(processData(input)).toBe("mobilePhone");

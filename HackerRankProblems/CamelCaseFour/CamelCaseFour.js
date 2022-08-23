@@ -63,12 +63,28 @@ function splitInput(type, input) {
   return result;
 }
 
-function splitVariable(input) {}
+function splitMethod(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length - 2; index++) {
+    if (input[index] === input[index].toUpperCase()) {
+      resultString += " " + input[index].toLowerCase();
+    } else {
+      resultString += input[index];
+    }
+  }
+  return resultString;
+}
 
 function splitClass(input) {}
 
-function splitMethod(input) {}
+function splitVariable(input) {}
 
 function combineInput(type, input) {}
+
+function combineVariable(input) {}
+
+function combineMethod(input) {}
+
+function combineClass(input) {}
 
 module.exports = processData;
