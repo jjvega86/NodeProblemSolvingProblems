@@ -15,6 +15,11 @@ test("mobile phone string becomes mobilePhone variable", () => {
   expect(processData(input)).toBe("mobilePhone");
 });
 
+test("my really big variable string becomes myReallyBigVariable string", () => {
+  let input = "C;V;my really big variable";
+  expect(processData(input)).toBe("myReallyBigVariable");
+});
+
 test("coffee machine string becomes CoffeeMachine class", () => {
   let input = "C;C;coffee machine";
   expect(processData(input)).toBe("CoffeeMachine");

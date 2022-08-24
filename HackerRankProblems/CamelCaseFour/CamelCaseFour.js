@@ -122,7 +122,19 @@ function combineInput(type, input) {
   return result;
 }
 
-function combineVariable(input) {}
+function combineVariable(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length; index++) {
+    if (input[index] === " ") {
+      continue;
+    } else if (input[index - 1] === " " && index !== 0) {
+      resultString += input[index].toUpperCase();
+    } else {
+      resultString += input[index];
+    }
+  }
+  return resultString;
+}
 
 function combineMethod(input) {}
 
