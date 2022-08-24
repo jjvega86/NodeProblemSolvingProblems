@@ -136,8 +136,32 @@ function combineVariable(input) {
   return resultString;
 }
 
-function combineMethod(input) {}
+function combineMethod(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length; index++) {
+    if (input[index] === " ") {
+      continue;
+    } else if (input[index - 1] === " " && index !== 0) {
+      resultString += input[index].toUpperCase();
+    } else {
+      resultString += input[index];
+    }
+  }
+  return resultString + "()";
+}
 
-function combineClass(input) {}
+function combineClass(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length; index++) {
+    if (input[index] === " ") {
+      continue;
+    } else if (input[index - 1] === " " || index === 0) {
+      resultString += input[index].toUpperCase();
+    } else {
+      resultString += input[index];
+    }
+  }
+  return resultString;
+}
 
 module.exports = processData;

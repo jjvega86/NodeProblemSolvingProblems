@@ -35,7 +35,7 @@ test("MyReallyLargeClassOfStuff class becomes my really large class of stuff str
   expect(processData(input)).toBe("my really large class of stuff");
 });
 
-test("whiteSheetOfPaper() method becomes white sheet of paper string", () => {
+test("white sheet of paper string becomes whiteSheetOfPaper() method", () => {
   let input = "C;M;white sheet of paper";
   expect(processData(input)).toBe("whiteSheetOfPaper()");
 });
