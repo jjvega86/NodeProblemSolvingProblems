@@ -75,11 +75,52 @@ function splitMethod(input) {
   return resultString;
 }
 
-function splitClass(input) {}
+function splitClass(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length; index++) {
+    if (index === 0) {
+      resultString += input[index].toLowerCase();
+    } else if (input[index] === input[index].toUpperCase()) {
+      resultString += " " + input[index].toLowerCase();
+    } else {
+      resultString += input[index];
+    }
+  }
 
-function splitVariable(input) {}
+  return resultString;
+}
 
-function combineInput(type, input) {}
+function splitVariable(input) {
+  let resultString = "";
+  for (let index = 0; index < input.length; index++) {
+    if (input[index] === input[index].toUpperCase()) {
+      resultString += " " + input[index].toLowerCase();
+    } else {
+      resultString += input[index];
+    }
+  }
+  return resultString;
+}
+
+function combineInput(type, input) {
+  let result = "";
+
+  switch (type) {
+    case "M":
+      result = combineMethod(input);
+      break;
+    case "C":
+      result = combineClass(input);
+      break;
+    case "V":
+      result = combineVariable(input);
+      break;
+    default:
+      return result;
+  }
+
+  return result;
+}
 
 function combineVariable(input) {}
 

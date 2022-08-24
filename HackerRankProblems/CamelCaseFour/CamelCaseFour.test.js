@@ -20,9 +20,14 @@ test("coffee machine string becomes CoffeeMachine class", () => {
   expect(processData(input)).toBe("CoffeeMachine");
 });
 
-test("large software book string becomes LargeSoftwareBook class", () => {
+test("LargeSoftwareBook class becomes large software book string", () => {
   let input = "S;C;LargeSoftwareBook";
   expect(processData(input)).toBe("large software book");
+});
+
+test("MyReallyLargeClassOfStuff class becomes my really large class of stuff string", () => {
+  let input = "S;C;MyReallyLargeClassOfStuff";
+  expect(processData(input)).toBe("my really large class of stuff");
 });
 
 test("whiteSheetOfPaper() method becomes white sheet of paper string", () => {
