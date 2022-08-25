@@ -2,6 +2,6 @@
 //TODO: Write tests for MinMaxSum
 //TODO: Write tests for TwoSum
 
-const breakingRecords = require("./HackerRankProblems/BreakingTheRecords/BreakingTheRecords");
+const processData = require("./HackerRankProblems/CamelCaseFour/CamelCaseFour");
 
-breakingRecords([12, 24, 10, 24]);
+console.log(processData("S;M;plasticCup()"));
