@@ -2,6 +2,6 @@
 //TODO: Write tests for MinMaxSum
 //TODO: Write tests for TwoSum
 
-const processData = require("./HackerRankProblems/CamelCaseFour/CamelCaseFour");
+const divisibleSumPairs = require("./HackerRankProblems/DivisibleSumPairs/DivisibleSumPairs");
 
-console.log(processData("S;M;plasticCup()"));
+console.log(divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]));
