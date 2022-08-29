@@ -12,14 +12,23 @@ Three pairs meet criteria:
 */
 
 /**
- *
+ * Big O - O(n^2). Steps increase exponentially with input size.
  * @param {number} n length of array "ar"
  * @param {number} k the integer divisor
  * @param {number[]} ar an array of integers
  * @returns {number} the number of pairs
  */
 function divisibleSumPairs(n, k, ar) {
-  // Write your code here
+  let pairCount = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if ((ar[i] + ar[j]) % k === 0 && i < j) {
+        pairCount++;
+      }
+    }
+  }
+
+  return pairCount;
 }
 
 module.exports = divisibleSumPairs;
