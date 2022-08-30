@@ -2,6 +2,8 @@
 //TODO: Write tests for MinMaxSum
 //TODO: Write tests for TwoSum
 
-const divisibleSumPairs = require("./HackerRankProblems/DivisibleSumPairs/DivisibleSumPairs");
+const matchingStrings = require("./HackerRankProblems/SparseArrays/SparseArrays");
 
-console.log(divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]));
+console.log(
+  matchingStrings(["aba", "baba", "aba", "xzxb"], ["aba", "xzxb", "ab"])
+);
