@@ -2,8 +2,6 @@
 //TODO: Write tests for MinMaxSum
 //TODO: Write tests for TwoSum
 
-const matchingStrings = require("./HackerRankProblems/SparseArrays/SparseArrays");
+const lonelyInteger = require("./HackerRankProblems/LonelyInteger/LonelyInteger");
 
-console.log(
-  matchingStrings(["aba", "baba", "aba", "xzxb"], ["aba", "xzxb", "ab"])
-);
+lonelyInteger([1, 2, 3, 4, 3, 2, 1]);
