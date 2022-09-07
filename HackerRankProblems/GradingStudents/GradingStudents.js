@@ -6,9 +6,19 @@
  *      If the value of grade is less than 40, no rounding occurs (failing grade)
  * @param {number[]} grades Student grades before rounding
  * @returns {number[]} grades after rounding
+ * Time Complexity: O(N) Linear
  */
 function gradingStudents(grades) {
   let roundedGrades = [];
+
+  grades.forEach((grade) => {
+    let nextMultipleOfFive = Math.ceil(grade / 5) * 5;
+    if (grade < 38 || nextMultipleOfFive - grade >= 3) {
+      roundedGrades.push(grade);
+    } else {
+      roundedGrades.push(nextMultipleOfFive);
+    }
+  });
 
   return roundedGrades;
 }

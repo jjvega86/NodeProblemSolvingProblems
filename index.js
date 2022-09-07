@@ -2,8 +2,6 @@
 //TODO: Write tests for MinMaxSum
 //TODO: Write tests for TwoSum
 
-const matchingStrings = require("./HackerRankProblems/SparseArrays/SparseArrays");
+const gradingStudents = require("./HackerRankProblems/GradingStudents/GradingStudents");
 
-console.log(
-  matchingStrings(["aba", "baba", "aba", "xzxb"], ["aba", "xzxb", "ab"])
-);
+gradingStudents([73, 67, 38, 33]);
