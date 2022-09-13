@@ -1,9 +1,3 @@
-//TODO: Write tests for MilitaryTimeConverter
-//TODO: Write tests for MinMaxSum
-//TODO: Write tests for TwoSum
+const flippingBits = require("./HackerRankProblems/FlippingBits/FlippingBits");
 
-
-const gradingStudents = require("./HackerRankProblems/GradingStudents/GradingStudents");
-
-gradingStudents([73, 67, 38, 33]);
-
+console.log(flippingBits(2));
