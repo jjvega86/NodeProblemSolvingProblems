@@ -7,9 +7,7 @@
  * @returns {number} unsigned integer
  */
 function flippingBits(n) {
-  let finalResult;
-
-  return finalResult;
+  return 4294967295 - n;
 }
 
 module.exports = flippingBits;
